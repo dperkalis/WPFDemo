@@ -2,18 +2,13 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:WPFApp.ViewModel"
-       
         Title="MainWindow" Height="350" Width="525">
-    <Window.Resources>
-       
-       
-    </Window.Resources>
     <Window.DataContext>
         <local:WorkHistoryViewModel />
     </Window.DataContext>
     <Grid>
         <StackPanel Orientation="Vertical">
-            <Label Content="Users" Style="{StaticResource HeaderLabel}" />
+            <Label Content="Users to Manage" Style="{StaticResource HeaderLabel}" />
             <ListBox Name="Users" ItemsSource="{Binding Path=Users}" Style="{StaticResource Fancy}">
             </ListBox>
             <Button MinWidth="150" MaxWidth="250" Content="Button" Margin="15" Command="{Binding GetSelectedPlayer}" />
