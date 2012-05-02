@@ -8,7 +8,7 @@
     </Window.DataContext>
     <Grid>
         <StackPanel Orientation="Vertical">
-            <Label Content="Users to Manage" Style="{StaticResource HeaderLabel}" />
+            <Label Content="Users" Style="{StaticResource HeaderLabel}" />
             <ListBox Name="Users" ItemsSource="{Binding Path=Users}" Style="{StaticResource Fancy}">
             </ListBox>
             <Button MinWidth="150" MaxWidth="250" Content="Button" Margin="15" Command="{Binding GetSelectedPlayer}" />
