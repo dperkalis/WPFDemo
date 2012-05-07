@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-F:\Data\Personal\Projects\WPFApp\obj\Debug\
+C:\Data\Projects\WPFDemo\obj\Debug\
 WPFApp
 none
 false
 DEBUG;TRACE
-F:\Data\Personal\Projects\WPFApp\App.xaml
-11151548125
+C:\Data\Projects\WPFDemo\App.xaml
+2-467079176
 
-141883036454
+17-1778565376
 12-1401562060
-MainWindow.xaml;
+MainWindow.xaml;ProjectDetail.xaml;
 
 True
 

@@ -4,14 +4,14 @@
         xmlns:local="clr-namespace:WPFApp.ViewModel"
         Title="MainWindow" Height="350" Width="525">
     <Window.DataContext>
-        <local:WorkHistoryViewModel />
+        <local:ProjectsViewModel />
     </Window.DataContext>
     <Grid>
         <StackPanel Orientation="Vertical">
             <Label Content="Users" Style="{StaticResource HeaderLabel}" />
-            <ListBox Name="Users" ItemsSource="{Binding Path=Users}" Style="{StaticResource Fancy}">
+            <ListBox Name="Projects" ItemsSource="{Binding Path=Projects}" Style="{StaticResource Fancy}">
             </ListBox>
-            <Button MinWidth="150" MaxWidth="250" Content="Button" Margin="15" Command="{Binding GetSelectedPlayer}" />
+            <Button MinWidth="150" MaxWidth="250" Content="Button" Margin="15" Command="{Binding ShowProjectDetail}" />
         </StackPanel>
     </Grid>
 </Window>

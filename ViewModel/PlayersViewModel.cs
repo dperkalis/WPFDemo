@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 using WPFApp.Infrastructure;
 using WPFApp.Model;
@@ -12,38 +13,41 @@ using WPFApp.Services;
 
 namespace WPFApp.ViewModel
 {
-    public class WorkHistoryViewModel : INotifyPropertyChanged
+    public class ProjectsViewModel : INotifyPropertyChanged
     {
-        private ObservableCollection<User> _users = DataService.GetUsers();
+        private ObservableCollection<Project> _projects = DataService.GetProjects();
 
-        public ObservableCollection<User> Users
+        public ObservableCollection<Project> Projects
         {
-            get { return _users; }
+            get { return _projects; }
             set
             {
-                if (_users != value)
+                if (_projects != value)
                 {
-                    _users = value;
-                    RaisePropertyChanged("Users");
+                    _projects = value;
+                    RaisePropertyChanged("Projects");
                 }
             }
         }
 
-        public bool CanGetSelectedUser()
+        private bool CanGetProjectDetails()
         {
             return true;
         }
 
-        public void DoSomething()
+        private void LoadProjectDetail(Project project)
         {
-
+            var pd = new ProjectDetail();
+            pd.DataContext = new ProjectDetailViewModel(project);
+            pd.Show();
+           
         }
 
-        public ICommand GetSelectedUser
+        public ICommand ShowProjectDetail
         {
             get
             {
-                return new RelayCommand(DoSomething, CanGetSelectedUser);
+                return new RelayCommand<Project>(LoadProjectDetail, CanGetProjectDetails);
             }
         }
 

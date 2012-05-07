@@ -10,13 +10,11 @@ namespace WPFApp.Services
 {
     public static class DataService
     {
-        public static ObservableCollection<User> GetUsers()
+        public static ObservableCollection<Project> GetProjects()
         {
-            var data = new ObservableCollection<User>();
-            data.Add(new User() { FirstName = "Don", LastName = "Mattingly" });
-            data.Add(new User() { FirstName = "Mark", LastName = "McGwire" });
-            data.Add(new User() { FirstName = "Albert", LastName = "Pujols" });
-            data.Add(new User() { FirstName = "Alex", LastName = "Rodriguez" });
+            var data = new ObservableCollection<Project>();
+            data.Add(new Project() { Name = "OMC" });
+            data.Add(new Project() { Name = "Capture" });
             return data;
         }
     }

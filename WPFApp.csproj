@@ -53,11 +53,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Infrastructure\RelayCommand2.cs" />
     <Compile Include="Infrastructure\RelayCommand.cs" />
     <Compile Include="Model\Project.cs" />
     <Compile Include="Model\WorkEntry.cs" />
+    <Compile Include="ProjectDetail.xaml.cs">
+      <DependentUpon>ProjectDetail.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Services\DataService.cs" />
     <Compile Include="ViewModel\PlayersViewModel.cs" />
+    <Compile Include="ViewModel\ProjectDetailViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -70,9 +75,13 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ProjectDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Player.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

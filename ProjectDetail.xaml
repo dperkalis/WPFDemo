@@ -1,0 +1,12 @@
+﻿<Window x:Class="WPFApp.ProjectDetail"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:WPFApp.ViewModel"
+        Title="{Binding Title}" Height="300" Width="300">
+    <Window.DataContext>
+        <local:ProjectDetailViewModel x:Name="pd" />
+    </Window.DataContext>
+    <Grid>
+        <Label Content="{Binding  Path=Project.Name}" />
+    </Grid>
+</Window>
