@@ -15,6 +15,10 @@ namespace WPFApp.Services
             var data = new ObservableCollection<Project>();
             data.Add(new Project() { Name = "OMC" });
             data.Add(new Project() { Name = "Capture" });
+            data.Add(new Project() { Name = "Agent" });
+            data.Add(new Project() { Name = "Licensing" });
+            data.Add(new Project() { Name = "MRC" });
+            data.Add(new Project() { Name = "Forms" });
             return data;
         }
     }

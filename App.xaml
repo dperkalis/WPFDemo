@@ -5,43 +5,35 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
-            <Style TargetType="ListBox" x:Key="Default">
-                <Setter Property="ItemTemplate">
-                    <Setter.Value>
-                        <DataTemplate>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition SharedSizeGroup="Column0"/>
-                                    <ColumnDefinition SharedSizeGroup="Column1"/>
-                                    <ColumnDefinition SharedSizeGroup="Column2"/>
-                                    <ColumnDefinition SharedSizeGroup="Column3"/>
-                                </Grid.ColumnDefinitions>
-                                <Label Content="{Binding Path=FirstName}" Grid.Column="0" />
-                                <Label Content="{Binding Path=LastName}" Grid.Column="1" />
-                                <Label Content="{Binding Path=Team}" Grid.Column="2" />
-                                <Label Content="{Binding Path=Average}" Grid.Column="3" />
-                            </Grid>
-                        </DataTemplate>
-                    </Setter.Value>
+
+            <Style TargetType="ListBox">
+                <Setter Property="ScrollViewer.HorizontalScrollBarVisibility">
+                    <Setter.Value>Disabled</Setter.Value>
                 </Setter>
-            </Style>
-            <Style TargetType="ListBox" x:Key="Fancy">
-                
                 <Setter Property="ItemTemplate">
                     <Setter.Value>
                         <DataTemplate>
                             <Button Command="{Binding Path=DataContext.ShowProjectDetail,RelativeSource={RelativeSource AncestorType={x:Type Window}}}" CommandParameter="{Binding}">
                                 <Button.Content>
-                                    <StackPanel Orientation="Horizontal">
-                                        <Label Width="100" Content="{Binding Path=Name}" />
-                                        <Label Content="Pick Me!!" />
-                                    </StackPanel>
+                                    <StackPanel Orientation="Vertical">
+                                            <Image Source="Content/Clouds.png" Width="125" Height="125"  />
+                                            <Label Content="{Binding Path=Name}" HorizontalAlignment="Center" />
+                                </StackPanel>
                                 </Button.Content>
                             </Button>
                         </DataTemplate>
                     </Setter.Value>
                 </Setter>
+                <Setter Property="ItemsPanel">
+                    <Setter.Value>
+                        <ItemsPanelTemplate>
+                            <WrapPanel></WrapPanel>
+                        </ItemsPanelTemplate>
+                    </Setter.Value>
+                </Setter>
             </Style>
+
+            
             <ControlTemplate TargetType="ListBox" x:Key="MasterLayout">
                 <Grid Grid.IsSharedSizeScope="True">
                     <Grid.RowDefinitions>
@@ -131,14 +123,25 @@
                 BorderBrush="Gray" BorderThickness="1" />
                 </Grid>
             </ControlTemplate>
-            <FontFamily x:Key="AppFontFamily">Verdana</FontFamily>
+
+
+            <FontFamily x:Key="AppFontFamily">Segoe</FontFamily>
+            <sys:Double x:Key="AppFontSize">34</sys:Double>
+            <FontWeight x:Key="AppFontWeight">Normal</FontWeight>
+
             <FontWeight x:Key="AppHeaderFontWeight">Bold</FontWeight>
-            <sys:Double x:Key="AppHeaderFontSize">25</sys:Double>
+            <sys:Double x:Key="AppHeaderFontSize">14</sys:Double>
 
             <Style TargetType="Label" x:Key="HeaderLabel">
                 <Setter Property="FontFamily" Value="{StaticResource AppFontFamily}" />
                 <Setter Property="FontWeight" Value="{StaticResource AppHeaderFontWeight}" />
                 <Setter Property="FontSize" Value="{StaticResource AppHeaderFontSize}"/>
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource AppFontFamily}" />
+                <Setter Property="FontWeight" Value="{StaticResource AppFontWeight}" />
+                <Setter Property="FontSize" Value="{StaticResource AppFontSize}"/>
             </Style>
         </ResourceDictionary>
     </Application.Resources>

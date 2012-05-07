@@ -30,3 +30,6 @@ C:\Data\Projects\WPFDemo\obj\Debug\WPFApp.Properties.Resources.resources
 C:\Data\Projects\WPFDemo\obj\Debug\WPFApp.csproj.GenerateResource.Cache
 C:\Data\Projects\WPFDemo\obj\Debug\ProjectDetail.baml
 C:\Data\Projects\WPFDemo\obj\Debug\ProjectDetail.g.cs
+F:\Data\Personal\Projects\WPFApp\obj\Debug\ProjectDetail.g.cs
+F:\Data\Personal\Projects\WPFApp\obj\Debug\ProjectDetail.baml
+F:\Data\Personal\Projects\WPFApp\obj\Debug\WPFApp.csprojResolveAssemblyReference.cache
